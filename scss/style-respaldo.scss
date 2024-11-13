@@ -1,0 +1,272 @@
+body {
+    background-color: rgba(63, 228, 228, 0.925);
+    
+    }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    .grid-container-header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 20px repeat(1, 6.25rem);
+    align-items: center;
+    width: 100%;
+
+    .navbar {
+        grid-column: 2 / 7;
+        grid-row: 2 / 3;
+        gap: 10px;
+        display: flex;
+
+        ul {
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                list-style-type: none;
+                font-size: 20px;
+
+        &:hover {
+            color: aqua;
+            text-decoration: underline;
+        }
+        }
+    }
+    }
+
+        
+    .logo {
+            
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        max-width: 50%;
+        max-height: 50%;
+        object-fit: cover;
+        justify-self: center;
+        }
+
+    .discount {
+        background-color: rgb(75, 75, 75);
+        grid-column: 1 / 7;
+        text-align: center;
+        color: aliceblue;
+        height: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        width: 100%;
+        align-self: flex-start;
+    }
+}
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(12, 6.25rem);
+        align-items: center;
+
+        .home {
+            background-color: blue;
+            text-align: center;
+            color: white;
+            grid-column: 1 / 7;
+            grid-row: 1 / 2;
+            font-size: 20px;
+
+            .cuenta-color {
+            color: aqua;
+        }
+    }
+  
+    .texto {
+      grid-column: 2 / 6;
+      grid-row: 1 / 2;
+      text-align: center;
+      font-size: 15px;
+    }
+  
+    .title {
+      grid-column: 3 / 5;
+      grid-row: 2 / 3;
+      text-align: center;
+      font-size: 25px;
+    }
+  
+    .dermapen {
+      grid-column: 1 / 4;
+      grid-row: 1 / 8;
+      justify-self: center;
+      height: 200px;
+      width: 100px;
+      object-fit: cover;
+    }
+  
+    .peeling {
+      grid-column: 4 / 7;
+      grid-row: 1 / 8;
+      height: 200px;
+      width: 100px;
+      justify-self: center;
+      object-fit: cover;
+    }
+  
+    .novedades {
+      grid-column: 3 / 5;
+      grid-row: 1 / 2;
+      text-align: center;
+      font-size: 50px;
+    }
+  
+    .login-register {
+      grid-column: 2 / 6;
+      grid-row: 2 / 3;
+      text-align: center;
+      font-size: 30px;
+    }
+  
+    .categorias {
+      grid-column: 2 / 6; // Cambia según sea necesario para ocupar el ancho deseado
+      grid-row: 2 / 5;
+      font-size: 30px;
+      text-align: center;
+      font-weight: bold;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap; // Evita que el texto se divida en varias líneas
+      text-transform: uppercase;
+      letter-spacing: 2px;
+  
+      &::before,
+      &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          width: 100px; // Ajusta el ancho de las líneas
+          height: 2px;
+          background-color: #333;
+      }
+  
+      &::before {
+          left: -120px;
+          transform: translateY(-50%);
+      }
+  
+      &::after {
+          right: -120px;
+          transform: translateY(-50%);
+      }
+  }
+  
+    .img-1, .imgnovedades, .imgnovedades-2 {
+        grid-column: 1 / 7;
+        grid-row: 1 / 7;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        justify-self: stretch;
+        align-self: flex-start;
+    }
+    .imgnovedades-2{
+        grid-column: 1 / 7;
+        grid-row: 4 / 11;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        justify-self: stretch;
+    }
+    .img-row{
+        grid-column: 1 / 7;
+        grid-row: 4 / 6;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Dividir en tres tercios */
+        gap: 10px; /* Ajusta el espacio entre imágenes si lo deseas */
+    }
+
+    .img-2, .img-3, .img-4 {
+        grid-row: 9 / 10;
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: cover;
+        justify-self: center;
+    }
+    .cuadrado-row{
+        grid-column: 1 / 7;
+        grid-row: 1 / 7;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Dividir en tres tercios */
+        gap: 10px; /* Ajusta el espacio entre imágenes si lo deseas */
+    }
+    .cuadrado {
+      border: 1px solid black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+      max-width: 200px;
+      max-height: 400px;
+      font-size: 7px;
+      text-align: center;
+      
+  }
+  
+  .cuadrado-texto, .cuadrado-texto-2, .cuadrado-texto-3 {
+      border: 1px solid black;
+      padding: 10px;  // Reducido para ajustarse al tamaño
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  // Asegura que el texto se centre verticalmente
+      align-items: center;  // Asegura que el texto se centre horizontalmente
+      width: 100%;  // Establecemos un ancho fijo
+      height: auto;  // Deja que la altura se ajuste al contenido
+      font-size: 7px;
+      text-align: center;
+      
+      box-sizing: border-box;  // Asegura que padding no aumente el tamaño
+      max-height: 50px;  // Limita la altura máxima para evitar que crezca demasiado
+      overflow: hidden;  // Oculta el contenido que exceda el tamaño máximo
+  }
+}
+  
+    .flex-lista {
+        margin: 30px auto;
+        display: block;
+        max-width: 800px;
+        padding: 0 20px;
+        
+        .texto{
+            margin-bottom: 50px;
+            text-align: center;
+            
+            display: flex; // Hace que el contenedor sea un flexbox
+            justify-content: center; // Centra el texto horizontalmente
+            align-items: center; // Centra el texto verticalmente
+        }
+        ul {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 0;
+            list-style-type: none;
+            
+  
+            li {
+                flex: 1 0 calc(33.333% - 10px);
+                box-sizing: border-box;
+            }
+        }
+        
+  
+    img {
+      width: 100%;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+  }
+  
+  
+  
