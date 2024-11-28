@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Beauty - agendar fecha</title>
+    <meta name="keywords" content="peeling facial, tratamientos estéticos, rejuvenecimiento de la piel, eliminar manchas, exfoliación de la piel, tratamientos anti-edad, cuidado de la piel, estética facial, salud de la piel, piel radiante, exfoliación química, peeling en clínica">
+    <meta name="description" content="Descubre nuestros tratamientos de peeling facial para rejuvenecer tu piel, eliminar imperfecciones y restaurar su luminosidad. Tratamientos personalizados con resultados visibles para una piel más suave y saludable. ¡Reserva tu cita hoy mismo!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="discount">15% OFF con transferencia o efectivo contra entrega</div>     
+    <header class="grid-container-header">
+            
+        <img src="../Media/Logo/Ellipse 1.png" alt="" class="logo">
+        
+        <nav class="navbar">
+            
+            <ul class="navlist">
+                <li><a href="../index.html" class="spacing"></a>Inicio</li>
+                <li><a href="#" class="spacing"></a>Tratamiento</li>
+                <li><a href="./novedades.html" class="spacing"></a>Testimonios</li>
+                <li><a href="./micuenta.html" class="spacing"></a>Mi cuenta</li>
+                <li><a href="./productos.html" class="spacing"></a>Información</li>
+            </ul>
+        </nav>
+        <a class="botton" href="#"><button>Register</button></a>
+        
+    </header>
+
+    <main>
+        <h1 class = "title">Reservar Fecha</h1>
+        <div class="calendario">
+            <div class="calendario_info">
+                <div class="anterior" id="mes_anterior">&#8592;</div>
+                <div class="mes_calendario" id ="mes"></div>
+                <div class="year_calendario" id = "year"></div>
+                <div class ="siguiente" id="mes_siguiente">&#8594;</div>
+            </div>
+            <div class ="semana">
+                <div class="dia_item">Lunes</div>
+                <div class="dia_item">Martes</div>
+                <div class="dia_item">Miercoles</div>
+                <div class="dia_item">Jueves</div>
+                <div class="dia_item">Viernes</div>
+                <div class="dia_item">Sabado</div>
+                <div class="dia_item">Domingo</div>
+            </div>
+    
+            <div class ="Dias" id="dias">
+                <!-- HTML <button class="button-2" role="button">Button 2</button>-->
+            </div>
+    
+        </div>
+        <form action="/submit" method="POST">
+            <label for="opcion">Donde quieres atenderte:</label>
+            <select id="opcion" name="opcion">
+                <option value="opcion1" class="formula">Devoto</option>
+                <option value="opcion2" class="formula">Caseros</option>
+                <option value="opcion3" class="formula">Saavedra</option>
+            </select>
+            <button type="submit" class="botton">Enviar</button> <!--no aplica estilos por no ser un a-->
+        </form>
+    </main>
+
+    <footer>
+        <div class="foot"></div>
+            <h2 class="contacto">Contacto</h2>
+            <span class="direccion">Baigorria 5307, C1408 Cdad. Autónoma de Buenos Aires         <i class="fa-sharp fa-solid fa-location-dot"></i></span>
+            <hr class="line">
+            <div class="social">
+                <a href="https://wa.link/ibiiop"><i class="fa-brands fa-whatsapp logo-social"></i></a>
+                <a href="https://www.instagram.com/making.beauty.estetica/"><i class="fa-brands fa-instagram logo-social"></i></a>
+                <a href="tiktok.com/@making.beauty.estetica"><i class="fa-brands fa-tiktok logo-social"></i></a>
+            </div>
+    </footer>
+    <script src="../JS/dias.js"></script>
+    <script src="../JS/calendario.js"></script>
+</body>
+</html>

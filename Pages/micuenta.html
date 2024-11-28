@@ -8,41 +8,66 @@
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="peeling facial, tratamientos estéticos, rejuvenecimiento de la piel, eliminar manchas, exfoliación de la piel, tratamientos anti-edad, cuidado de la piel, estética facial, salud de la piel, piel radiante, exfoliación química, peeling en clínica">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    
+<body class="body-login">
+    <div class="discount">15% OFF con transferencia o efectivo contra entrega</div>
     <header class="grid-container-header">
-        <div class="discount">15% OFF con transferencia o efectivo contra entrega</div>
+        
         <img src="../Media/Logo/Ellipse 1.png" alt="" class="logo">
         
         <nav class="navbar">
             
-            <ul>
-                <li><a href="./Pages/tratamientos.html"></a>Tratamiento</li>
-                <li><a href="./Pages/novedades.html"></a>Novedades</li>
-                <li><a href="./Pages/micuenta.html"></a>Mi cuenta</li>
-                <li><a href="./Pages/productos.html"></a>Productos</li>
+            <ul class="navlist">
+                <li><a href="../index.html" class="spacing"></a>Inicio</li>
+                <li><a href="./calendario.html" class="spacing"></a>Tratamiento</li>
+                <li><a href="./novedades.html" class="spacing"></a>Testimonios</li>
+                <li><a href="#" class="spacing"></a>Mi cuenta</li>
+                <li><a href="./productos.html" class="spacing"></a>Información</li>
             </ul>
         </nav>
+        <a class="botton" href="#"><button>Register</button></a>
     </header>
     <main class="grid-container"> 
-        
-        <div class="home"> <span class="home-color">Home</span>/<span class="cuenta-color">Mi cuenta</span></div>
-        <div class="login-register">Login / Registrarse</div>
-        <div class="cuadrado cuadrado-row">
-            <p class="posicion-1">Nombre de Usuario o correo electronico</p>
-            <div class="cuadrado-texto"></div>
-            <p class="posicion-3">Contraseña</p>
-            <div class="cuadrado-texto-2"></div>
-            <p class="posicion-5">¿Olvidaste la Contraseña?</p>
-            <div class="cuadrado-texto-3"></div>
+        <div class="space-register">
+            <h2 class="login">Únase a nosotros o inicie sesión</h2>
+        <span class="text-login">Pague más rápido y sincronice sus favoritos. Solo tiene que introducir su correo electrónico y le enviaremos un enlace especial que le dará de alta al instante.</span>
+        <p class="text-login-1">Se creará automáticamente una cuenta para usted si aún no tiene una.</p>
+        <form action="/submit" method="post">
+            
+            <label for="email"></label>
+            <input type="text" class="email" id="contacto" name="contact" placeholder="Su dirección de correo electrónico o número de teléfono" required>
+            <a href="#"><button class="login-boton">Obtener enlace de inicio de sesión</button></a>
         </div>
+            <div class="space-register-1">
+                <h1 class="cuenta">Cuenta</h1>
+                <a href="#" class="navigator">Inicio</a><span class="slide"> / </span><a href="#" class="navigator">Tienda</a><span class="slide"> / </span><a href="#" class="navigator">Cuenta</a>
+                <div class="login-icon">
+                    <i class="fa-regular fa-circle-user login-icono"></i>
+                    <p class="position-icon">Cuenta de Invitado</p>
+                    <span class="position-icon-2">No ha iniciado sesión</span><span class="position-icon-3">Iniciar sesión</span>
+                </div>
+                <hr class="lining">
+                <h4 class="carrito">Carrito de compras</h4>
+                <span class="carrito-1">Su carrito está vacío</span>
+                <h4 class="carrito-2">Reseñas</h4>
+                <span class="carrito-3">No tienes ninguna reseña. Con tu primera consulta comparta su opinión.</span>
+            </div>
+            
         
-        <!--Falta hacerlo mas responsive y estilizado-->
-
+        
+        
     </main>
     <footer>
-
+        <div class="foot"></div>
+            <h2 class="contacto">Contacto</h2>
+            <span class="direccion">Baigorria 5307, C1408 Cdad. Autónoma de Buenos Aires         <i class="fa-sharp fa-solid fa-location-dot"></i></span>
+            <hr class="line">
+            <div class="social">
+                <a href="https://wa.link/ibiiop"><i class="fa-brands fa-whatsapp logo-social"></i></a>
+                <a href="https://www.instagram.com/making.beauty.estetica/"><i class="fa-brands fa-instagram logo-social"></i></a>
+                <a href="tiktok.com/@making.beauty.estetica"><i class="fa-brands fa-tiktok logo-social"></i></a>
+            </div>
     </footer>
 </body>
 </html>
