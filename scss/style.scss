@@ -1249,7 +1249,7 @@ button[type="submit"]:active {
                 display: inline-block;
                 margin-right: 0%;
                 flex-direction: column;
-                color: red
+
             }
             .logo{
                 width: 10%;
@@ -1543,7 +1543,7 @@ button[type="submit"]:active {
                 display: inline-block;
                 margin-right: 0%;
                 flex-direction: column;
-                color: red
+
             }
             .logo{
                 width: 10%;
@@ -1941,12 +1941,82 @@ button[type="submit"]:active {
                 display: inline-block;
                 margin-right: 0%;
                 flex-direction: column;
-                color: red
+
             }
             .logo{
                 width: 10%;
                 height: 10%;
 
+            }
+        }
+    }
+}
+
+@media (max-width: 380px){
+    body{
+        .title{
+            font-size: 20px;
+        }
+        .calendario{
+            .dia_item{
+                font-size: 5px;
+            }
+            .mes_calendario, .year_calendario{
+                font-size: 12px;
+                
+            }
+        }
+        .grid-container.gigante{
+            .img-row-1{
+                .group-img{
+                    .string{
+                        margin-top: 0px;
+
+                    }
+                }
+            }
+            .sub-making-1{
+                margin-top: 50px;
+            }
+        }
+        .discount{
+            font-size: 13px;
+        }
+        .grid-container{
+            .img-row{
+                grid-template-columns: repeat(2, 1fr); /* Dividir en tres tercios */
+                grid-template-rows: repeat(3, auto);
+            }
+            .titulo{
+                
+                grid-row: 1/2;
+            }
+            .text-1{
+                margin-top: 50px;
+            }
+
+        }
+        .grid-container-header{
+            .botton button{
+                padding: 2px 5px;
+                margin-bottom: 7px;
+                font-size: 5px;
+                border: none;
+                border-radius: 5px; /* Bordes redondeados */
+                background-color: #007bff;
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                &:hover{
+                        background-color: rgba(0, 204, 255, 0.884);
+                }
+            
+            }
+            .navbar{
+                .navlist{
+                    font-size: 4px;
+                    
+                }
             }
         }
     }

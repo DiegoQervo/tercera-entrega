@@ -1143,7 +1143,6 @@ h4 {
     display: inline-block;
     margin-right: 0%;
     flex-direction: column;
-    color: red;
   }
   body .grid-container-header .logo {
     width: 10%;
@@ -1398,7 +1397,6 @@ h4 {
     display: inline-block;
     margin-right: 0%;
     flex-direction: column;
-    color: red;
   }
   body .grid-container-header .logo {
     width: 10%;
@@ -1759,11 +1757,57 @@ h4 {
     display: inline-block;
     margin-right: 0%;
     flex-direction: column;
-    color: red;
   }
   body .grid-container-header .logo {
     width: 10%;
     height: 10%;
+  }
+}
+@media (max-width: 380px) {
+  body .title {
+    font-size: 20px;
+  }
+  body .calendario .dia_item {
+    font-size: 5px;
+  }
+  body .calendario .mes_calendario, body .calendario .year_calendario {
+    font-size: 12px;
+  }
+  body .grid-container.gigante .img-row-1 .group-img .string {
+    margin-top: 0px;
+  }
+  body .grid-container.gigante .sub-making-1 {
+    margin-top: 50px;
+  }
+  body .discount {
+    font-size: 13px;
+  }
+  body .grid-container .img-row {
+    grid-template-columns: repeat(2, 1fr); /* Dividir en tres tercios */
+    grid-template-rows: repeat(3, auto);
+  }
+  body .grid-container .titulo {
+    grid-row: 1/2;
+  }
+  body .grid-container .text-1 {
+    margin-top: 50px;
+  }
+  body .grid-container-header .botton button {
+    padding: 2px 5px;
+    margin-bottom: 7px;
+    font-size: 5px;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  body .grid-container-header .botton button:hover {
+    background-color: rgba(0, 204, 255, 0.884);
+  }
+  body .grid-container-header .navbar .navlist {
+    font-size: 4px;
   }
 }
 
