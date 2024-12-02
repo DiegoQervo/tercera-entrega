@@ -19,6 +19,13 @@ month.textContent = nombreMeses[mesActual];
 year.textContent = yearActual.toString();
 
 escribirMes(mesActual);
+window.addEventListener('DOMContentLoaded', function() {
+    let reservasGuardadas = localStorage.getItem('reservas');
+    if (reservasGuardadas) {
+        reservas = JSON.parse(reservasGuardadas);
+        console.log("Reservas cargadas:", reservas);
+    }
+});
 
 function escribirMes(month){
     for(let i = diaUno(); i > 0; i--){
@@ -91,17 +98,68 @@ function nuevaFecha(){
     month.textContent = nombreMeses[mesActual];
     year.textContent = yearActual.toString();
     dates.textContent= '';
-    escribirMes(mesActual);
+    escribirMes(mesActual); 
 }
+let reservas = [];
 
 function click_fecha(event) {
+    // Obtener los datos del día y mes seleccionados
     let diaSeleccionado = event.currentTarget.getAttribute("data-dia");
     let mesSeleccionado = event.currentTarget.getAttribute("data-mes");
-    console.log("Quieres reservar:", diaSeleccionado);
-    console.log("del Mes", nombreMeses[mesSeleccionado]);
+
+    // Obtener el contenedor donde se mostrará la información
+    let contenedorReserva = document.getElementById("reservaDetalles");
+
+    // Limpiar cualquier contenido previo
+    contenedorReserva.innerHTML = "";
+
+    // Crear un nuevo <p> para mostrar la fecha seleccionada
+    let parrafo = document.createElement("p");
+    parrafo.textContent = `Quieres reservar: ${diaSeleccionado} del mes ${nombreMeses[mesSeleccionado]}`;
     
-    mostrarHoras(diaSeleccionado, mesSeleccionado); // Llamar a la función para mostrar las horas
+    // Crear el botón de confirmación
+    let botonConfirmar = document.createElement("button");
+    botonConfirmar.textContent = "Confirmar reserva";
+    
+    // Agregar un evento al botón para confirmar la reserva
+    botonConfirmar.addEventListener("click", function() {
+        confirmarReserva(diaSeleccionado, mesSeleccionado);
+    });
+
+    // Añadir el párrafo y el botón al contenedor de la reserva
+    contenedorReserva.appendChild(parrafo);
+    contenedorReserva.appendChild(botonConfirmar);
+
+    // Llamar a la función para mostrar las horas disponibles
+    mostrarHoras(diaSeleccionado, mesSeleccionado);
 }
+
+function confirmarReserva(dia, mes) {
+    // Verificar si la fecha ya está reservada
+    const fechaExistente = reservas.some(reserva => reserva.dia === dia && reserva.mes === mes);
+
+    if (fechaExistente) {
+        // Informar al usuario que la fecha ya está reservada
+        alert(`La fecha ${dia} de ${nombreMeses[mes]} ya está reservada. Por favor, elige otra fecha.`);
+        console.log(`La fecha ${dia} de ${nombreMeses[mes]} ya está reservada.`);
+    } else {
+        // Crear un objeto con la fecha seleccionada
+        const reserva = {
+            dia: dia,
+            mes: mes
+        };
+
+        // Agregar la reserva al arreglo de reservas
+        reservas.push(reserva);
+
+        // Guardar las reservas en localStorage (como JSON)
+        localStorage.setItem('reservas', JSON.stringify(reservas));
+
+        console.log("Reserva confirmada para el día " + dia + " del mes " + nombreMeses[mes]);
+        console.log("Lista de reservas:", reservas);
+    }
+}
+
 
 function mostrarHoras(diaSeleccionado, mesSeleccionado) {
     // Crear un contenedor para las horas si no existe
